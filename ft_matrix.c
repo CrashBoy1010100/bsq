@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 17:22:20 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/24 18:55:33 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/24 19:03:32 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	**ft_values(int i, int j, char *str)
 		{
 			i++;
 			j++;
-			k = 0;
+			k = -1;
 		}
 		matrix[j][++k] = str[i];
 	}
@@ -73,5 +73,6 @@ char	**ft_matrix(char *argv)
 			j++;
 	}
 	matrix = ft_values(i, j, str);
+	close(descriptor);
 	return (matrix);
 }
