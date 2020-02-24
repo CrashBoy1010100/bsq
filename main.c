@@ -6,21 +6,21 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 13:13:22 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/24 17:39:59 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/24 18:39:08 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 #include "libraries.h"
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int		i;
 	int		j;
 	char	**matrix;
 
 	matrix = NULL;
-	matrix = ft_matrix(argv[1], matrix);
+	matrix = ft_matrix(argv[1]);
 	i = argc - argc - 1;
 	while (++i < 9)
 	{
