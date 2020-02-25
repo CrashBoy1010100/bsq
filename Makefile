@@ -1,4 +1,4 @@
- SRCS	= main.c error.c ft_matrix.c
+ SRCS	= main.c error.c ft_matrix.c detect_first_line_file.c
  LIBS	= bsq.h
  OBJS	= ${SRCS:.c=.o}
  NAME	= bsq

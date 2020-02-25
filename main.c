@@ -6,12 +6,12 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 13:13:22 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/24 18:39:08 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/25 11:01:57 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bsq.h"
 #include "libraries.h"
+#include "bsq.h"
 
 int		main(int argc, char **argv)
 {
@@ -20,8 +20,18 @@ int		main(int argc, char **argv)
 	char	**matrix;
 
 	matrix = NULL;
+	if (!error(argc))
+		print_error();
 	matrix = ft_matrix(argv[1]);
-	i = argc - argc - 1;
+	read_first_line(argv[1]);
+	printf("%s", info.number);
+	printf("%c", info.empty);
+	printf("%c", info.obstacle);
+	printf("%c", info.full);
+
+
+	printf("\n\n");
+	i = -1;
 	while (++i < 9)
 	{
 		j = -1;

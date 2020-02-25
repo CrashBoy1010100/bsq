@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 17:22:20 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/24 19:03:32 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/25 10:13:33 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,26 +53,29 @@ char	**ft_values(int i, int j, char *str)
 
 char	**ft_matrix(char *argv)
 {
-	int		descriptor;
 	char	**matrix;
 	char	*str;
-	int		i;
-	int		j;
+	int		i[3];
 
 	str = NULL;
 	matrix = NULL;
-	descriptor = open(&*argv, O_RDONLY);
-	str = malloc(8192);
-	if (!str)
+	i[0] = open(&*argv, O_RDONLY);
+	i[1] = 0;
+	while (read(i[0], &str, 1))
+		i[1]++;
+	close(i[0]);
+	str = (char *)malloc(i[1]);
+	if (str == NULL)
 		return (NULL);
-	i = -1;
-	j = 0;
-	while (read(descriptor, &str[++i], 1))
+	i[0] = open(&*argv, O_RDONLY);
+	i[1] = -1;
+	i[2] = 0;
+	while (read(i[0], &str[++i[1]], 1))
 	{
-		if (str[i] == '\n')
-			j++;
+		if (str[i[1]] == '\n')
+			i[2]++;
 	}
-	matrix = ft_values(i, j, str);
-	close(descriptor);
+	close(i[0]);
+	matrix = ft_values(i[1], i[2], str);
 	return (matrix);
 }

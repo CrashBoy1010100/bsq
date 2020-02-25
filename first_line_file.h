@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libraries.h                                        :+:      :+:    :+:   */
+/*   first_line_file.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/24 18:11:47 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/24 20:07:25 by matascon         ###   ########.fr       */
+/*   Created: 2020/02/25 08:59:40 by matascon          #+#    #+#             */
+/*   Updated: 2020/02/25 09:19:39 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBRARIES_H
-# define LIBRARIES_H
-# include <fcntl.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdio.h>//////////////////////////////////////
+#ifndef FIRST_LINE_FILE_H
+# define FIRST_LINE_FILE_H
+
+struct	first_line_file
+{
+	char	number[32];
+	char	empty;
+	char	obstacle;
+	char	full;
+}info;
 #endif
