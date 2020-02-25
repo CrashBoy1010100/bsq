@@ -1,5 +1,5 @@
- SRCS	= main.c error.c ft_matrix.c detect_first_line_file.c
- LIBS	= bsq.h
+ SRCS	= main.c error.c matrix.c detect_first_line_file.c analyze_matrix.c paint_matrix.c
+ LIBS	= bsq.h libraries.h first_line_file.h point_master.h
  OBJS	= ${SRCS:.c=.o}
  NAME	= bsq
  CC		= cc

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_matrix.c                                        :+:      :+:    :+:   */
+/*   matrix.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 17:22:20 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/25 10:13:33 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/25 11:47:55 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libraries.h"
 
-char	**ft_memory(int size, int n_row)
+char	**memory(int size, int n_row)
 {
 	char	**matrix;
 	int		n_column;
@@ -26,13 +26,13 @@ char	**ft_memory(int size, int n_row)
 	return (matrix);
 }
 
-char	**ft_values(int i, int j, char *str)
+char	**values(int i, int j, char *str)
 {
 	char	**matrix;
 	int		k;
 
 	matrix = NULL;
-	matrix = ft_memory(i, j);
+	matrix = memory(i, j);
 	i = 0;
 	while (str[i] != '\n')
 		i++;
@@ -76,6 +76,6 @@ char	**ft_matrix(char *argv)
 			i[2]++;
 	}
 	close(i[0]);
-	matrix = ft_values(i[1], i[2], str);
+	matrix = values(i[1], i[2], str);
 	return (matrix);
 }

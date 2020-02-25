@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bsq.h                                              :+:      :+:    :+:   */
+/*   point_master.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/24 17:25:14 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/25 15:40:51 by matascon         ###   ########.fr       */
+/*   Created: 2020/02/25 14:16:28 by matascon          #+#    #+#             */
+/*   Updated: 2020/02/25 15:46:30 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BSQ_H
-# define BSQ_H
-# include "first_line_file.h"
-# include "point_master.h"
+#ifndef POINT_H
+# define POINT_H
 
-int		error(int argc);
-void	print_error(void);
-char	**ft_matrix(char *argv);
-void	read_first_line(char *argv);
-char	**analyze_matrix(char **matrix);
-char	**paint_matrix(char **matrix);
+struct	point_master
+{
+	int		i;
+	int		j;
+	char	value;
+}point;
 #endif
