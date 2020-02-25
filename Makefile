@@ -1,4 +1,4 @@
- SRCS	= main.c error.c matrix.c detect_first_line_file.c analyze_matrix.c paint_matrix.c
+ SRCS	= main.c error.c matrix.c detect_first_line_file.c analyze_matrix.c paint_matrix.c print.c
  LIBS	= bsq.h libraries.h first_line_file.h point_master.h
  OBJS	= ${SRCS:.c=.o}
  NAME	= bsq
@@ -22,15 +22,8 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		debug
-debug:
-			${DEBUG} ${NAME} 
-
-.PHONY:		s
-s:
-			./${NAME}}
-
-.PHONY:		 norme
 norme:
 			norminette ${SRCS}
 			norminette *.h
+
+.PHONY:		all clean fclean re norme

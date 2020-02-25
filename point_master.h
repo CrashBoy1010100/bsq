@@ -6,14 +6,14 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 14:16:28 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/25 15:46:30 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/25 20:00:05 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_H
-# define POINT_H
+#ifndef POINT_MASTER_H
+# define POINT_MASTER_H
 
-struct	point_master
+struct	s_point_master
 {
 	int		i;
 	int		j;
