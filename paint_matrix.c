@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:24:46 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/25 18:25:47 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/26 17:58:39 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	**turn_back(char **m)
 	int	j;
 
 	i = 0;
-	while (m[i][0] >= 48 && m[i][0] <= 57)
+	while (m[i][0] >= 32 && m[i][0] <= 126)
 	{
 		j = 0;
-		while (m[i][j] >= 48 && m[i][j] <= 57)
+		while (m[i][j] >= 32 && m[i][j] <= 126)
 		{
 			if (m[i][j] == '0')
 				m[i][j] = info.obstacle;
@@ -44,7 +44,7 @@ char	**fill_matrix(char **m)
 
 	i = point.i;
 	point_final = point.value - 48;
-	while (i <= point_final)
+	while (i < (point.i + point_final))
 	{
 		j = point.j;
 		while (j < (point.j + point_final))

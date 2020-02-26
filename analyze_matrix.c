@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 11:49:19 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/25 19:42:30 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/26 17:57:46 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ void	find_point(char **m)
 	point.j = 0;
 	point.value = '0';
 	i = 0;
-	while (m[i][0] >= 48 && m[i][0] <= 57)
+	while (m[i][0] >= 32 && m[i][0] <= 126)
 	{
 		j = 0;
-		while (m[i][j] >= 48 && m[i][j] <= 57)
+		while (m[i][j] >= 32 && m[i][j] <= 126)
 		{
 			if (m[i][j] > point.value)
 			{

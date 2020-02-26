@@ -6,7 +6,7 @@
 /*   By: matascon <matascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 13:13:22 by matascon          #+#    #+#             */
-/*   Updated: 2020/02/25 19:15:32 by matascon         ###   ########.fr       */
+/*   Updated: 2020/02/26 18:14:18 by matascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int		main(int argc, char **argv)
 	char	**matrix;
 	int		i;
 
-	matrix = NULL;
 	if (error(argc) == 0)
 		print_error();
 	else
@@ -26,6 +25,7 @@ int		main(int argc, char **argv)
 		i = 0;
 		while (argv[++i] != NULL)
 		{
+			matrix = NULL;
 			matrix = ft_matrix(argv[i]);
 			read_first_line(argv[i]);
 			matrix = analyze_matrix(matrix);
